@@ -1,0 +1,8 @@
+http:
+  port: "8082"
+
+webservice:
+  wsdl: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL"
+  service: "CountryInfoService"
+  port: "CountryInfoServiceSoap"
+  address: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"

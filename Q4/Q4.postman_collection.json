@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "6c5f7fad-559b-4090-bd44-1d9e081809d6",
+		"name": "Q4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListOfCountryNamesGroupedByContinent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/ListOfCountryNamesGroupedByContinent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"ListOfCountryNamesGroupedByContinent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fullcountryinfoallcontries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/fullcountryinfoallcontries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"fullcountryinfoallcontries"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

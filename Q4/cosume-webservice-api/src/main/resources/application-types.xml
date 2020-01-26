@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="dw" format="json">
+      <types:shape format="weave" example="examples/dw.json"><![CDATA[%dw 2.0
+
+type dw = {|
+  headers: {|  |}, 
+  attachments: {|  |}, 
+  body: {|
+    FullCountryInfoAllCountriesResponse: {|
+      FullCountryInfoAllCountriesResult: {|
+        tCountryInfo: {|
+          sISOCode: String, 
+          sName: String, 
+          sCapitalCity: String, 
+          sPhoneCode: String, 
+          sContinentCode: String, 
+          sCurrencyISOCode: String, 
+          sCountryFlag: String, 
+          Languages: {|
+            tLanguage: {|
+              sISOCode: String, 
+              sName: String
+            |}
+          |}
+        |}
+      |}
+    |}
+  |}
+|} {"example": "{\"headers\":{},\"attachments\":{},\"body\":{\"FullCountryInfoAllCountriesResponse\":{\"FullCountryInfoAllCountriesResult\":{\"tCountryInfo\":{\"sISOCode\":\"ZW\",\"sName\":\"Zimbabwe\",\"sCapitalCity\":\"Harare\",\"sPhoneCode\":\"263\",\"sContinentCode\":\"AF\",\"sCurrencyISOCode\":\"ZWD\",\"sCountryFlag\":\"http:\/\/www.oorsprong.org\/WebSamples.CountryInfo\/Flags\/Zimbabwe.jpg\",\"Languages\":{\"tLanguage\":{\"sISOCode\":\"eng\",\"sName\":\"English\"}}}}}}}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#95296926-1cf6-49e3-8fc4-e665f7a43caf">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="dw"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
